@@ -36,8 +36,8 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.04);
 }
 
 .navbar-logo img {
@@ -135,7 +135,7 @@ body {
   background: rgba(255, 255, 255, 0.97);
   color: #222;
   border-radius: 32px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 32px 32px rgba(0, 0, 0, 0.18);
   padding: 56px 64px;
   max-width: 1100px;
   width: 100vw;
