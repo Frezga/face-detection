@@ -24,6 +24,13 @@ body {
   color: #fff;
 }
 
+/* Background khusus untuk halaman dataset */
+#dataset {
+  background: url("/Project_Alin/Asset/background_dataset.png") no-repeat center
+    center fixed;
+  background-size: cover;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -157,13 +164,33 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
-
+#dataset .content-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 12px;
+}
+#dataset .content-left .desc {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
 .content-left h1 {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 50px;
   letter-spacing: 2px;
   line-height: 1.2;
+}
+#dataset .content-right h1 {
+  font-size: 3rem; /* Sama seperti teks "GET STARTED" */
+  font-weight: bold;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .content-left .illustration {
@@ -199,7 +226,15 @@ body {
   border-radius: 50%;
   margin-bottom: 24px;
 }
-
+.folder-icon {
+  width: 140px;
+  height: 140px;
+  background: #e0e0e0 url("/Project_Alin/Asset/folder_icon.svg") no-repeat
+    center center;
+  background-size: 70px 70px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
 .note {
   font-size: 1.2rem;
   color: #222;
@@ -218,6 +253,15 @@ body {
 footer,
 .credit p {
   display: none !important;
+}
+
+/* Aturan khusus untuk ilustrasi di halaman dataset */
+#dataset .illustration {
+  width: 95%;
+  height: auto;
+  max-width: 500px;
+  margin-bottom: 0;
+  margin-top: 32px;
 }
 
 /* Responsive */
