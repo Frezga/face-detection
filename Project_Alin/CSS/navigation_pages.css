@@ -1,0 +1,27 @@
+/* Kotak putih khusus halaman tentang/guide/kami */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  background: none;
+  box-shadow: none;
+  padding: 60px 0 0 0;
+}
+
+.about-box {
+  background: #fff;
+  color: #222;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  width: 98vw; /* Perbesar lebar */
+  max-width: 1200px; /* Perbesar max-width */
+  min-height: 500px; /* Perbesar tinggi minimum */
+  padding: 48px 60px; /* Perbesar padding */
+  font-size: 1.35rem;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  text-align: left;
+  overflow-y: auto;
+}
