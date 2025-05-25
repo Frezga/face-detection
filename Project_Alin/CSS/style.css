@@ -444,6 +444,19 @@ footer,
   overflow-y: auto;
 }
 
+/* Deskripsi bawah untuk dataset_input */
+.dataset-desc {
+  width: 100%;
+  text-align: center;
+  color: #222;
+  font-size: 1.25rem;
+  margin-top: 48px;
+  margin-bottom: 8px;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
 /* Highlight nav aktif */
 .navbar .navbar-nav .active-nav {
   color: #fff !important;

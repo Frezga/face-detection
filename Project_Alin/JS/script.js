@@ -61,6 +61,8 @@ function showDataset() {
   mainContent.innerHTML = datasetHTML;
   mainSection.id = "dataset";
   bindDatasetHover();
+  bindCameraClick();
+  bindFolderClick();
 }
 
 // Tampilkan halaman index
@@ -69,6 +71,7 @@ function showIndex() {
   mainSection.id = "home";
   bindIndexHover();
   bindCameraClick();
+  bindFolderClick();
 }
 
 // Tambahkan di bawah fungsi bindIndexHover()
@@ -81,6 +84,16 @@ function bindCameraClick() {
   }
 }
 
+function bindFolderClick() {
+  const folderIcon = document.querySelector(".folder-icon");
+  if (folderIcon) {
+    folderIcon.addEventListener("click", () => {
+      window.location.href = "dataset_input.html";
+    });
+  }
+}
+
 // Pertama kali, bind event hover ke ilustrasi
 bindIndexHover();
 bindCameraClick();
+bindFolderClick();
