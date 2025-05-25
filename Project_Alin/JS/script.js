@@ -48,24 +48,39 @@ function bindIndexHover() {
   }
 }
 
-// Fungsi untuk bind event mouseleave di halaman dataset
-function bindDatasetLeave() {
-  mainContent.addEventListener("mouseleave", showIndex, { once: true });
+// Fungsi untuk bind event mouseenter di halaman dataset (area kanan)
+function bindDatasetHover() {
+  const rightArea = document.querySelector(".content-right");
+  if (rightArea) {
+    rightArea.addEventListener("mouseenter", showIndex, { once: true });
+  }
 }
 
 // Tampilkan halaman dataset
 function showDataset() {
   mainContent.innerHTML = datasetHTML;
-  mainSection.id = "dataset"; // Ganti id section agar background berubah
-  bindDatasetLeave();
+  mainSection.id = "dataset";
+  bindDatasetHover();
 }
 
 // Tampilkan halaman index
 function showIndex() {
   mainContent.innerHTML = indexHTML;
-  mainSection.id = "home"; // Kembalikan id section ke home
+  mainSection.id = "home";
   bindIndexHover();
+  bindCameraClick();
+}
+
+// Tambahkan di bawah fungsi bindIndexHover()
+function bindCameraClick() {
+  const cameraIcon = document.querySelector(".camera-icon");
+  if (cameraIcon) {
+    cameraIcon.addEventListener("click", () => {
+      window.location.href = "input_face.html";
+    });
+  }
 }
 
 // Pertama kali, bind event hover ke ilustrasi
 bindIndexHover();
+bindCameraClick();

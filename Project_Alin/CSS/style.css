@@ -217,6 +217,7 @@ body {
   margin-bottom: 40px;
 }
 
+/* --- ICON --- */
 .camera-icon {
   width: 140px;
   height: 140px;
@@ -225,7 +226,19 @@ body {
   background-size: 70px 70px;
   border-radius: 50%;
   margin-bottom: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  transition: background 0.2s;
 }
+
+.camera-icon:hover {
+  background: #ffd600 url("/Project_Alin/Asset/camera_icon.svg") no-repeat
+    center center;
+  background-size: 70px 70px;
+}
+
 .folder-icon {
   width: 140px;
   height: 140px;
@@ -262,6 +275,53 @@ footer,
   max-width: 500px;
   margin-bottom: 0;
   margin-top: 32px;
+}
+
+/* Kotak putih khusus halaman input_face */
+.input-face-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.input-face-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  background: none;
+}
+
+.input-face-card {
+  background: #fff;
+  color: #222;
+  border-radius: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  width: 340px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  text-align: center;
+  position: relative;
+}
+
+.input-face-card .camera-icon,
+.input-face-card .folder-icon {
+  margin-top: 32px;
+}
+
+.input-face-middle {
+  font-size: 1.3rem;
+  color: #222;
+  margin: 0 16px;
+  font-weight: 500;
 }
 
 /* Responsive */
