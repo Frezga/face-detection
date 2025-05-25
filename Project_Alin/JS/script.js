@@ -24,10 +24,10 @@ const indexHTML = `
 // Template halaman dataset (dibalik posisinya)
 const datasetHTML = `
   <div class="content-left">
-    <p class="desc">Masukkan dataset Anda untuk memulai</p>
+    <p class="desc">Masukkan dataset anda </p>
     <div class="folder-icon"></div>
     <p class="note">
-      Pastikan dataset Anda sudah sesuai format yang diminta.
+      Jika sudah menambahkan dataset, arahkan kursor ke gambar.
     </p>
   </div>
   <div class="content-right">

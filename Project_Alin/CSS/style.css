@@ -247,6 +247,17 @@ body {
   background-size: 70px 70px;
   border-radius: 50%;
   margin-bottom: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  transition: background 0.2s;
+}
+
+.folder-icon:hover {
+  background: #ffd600 url("/Project_Alin/Asset/folder_icon.svg") no-repeat
+    center center;
+  background-size: 70px 70px;
 }
 .note {
   font-size: 1.2rem;
@@ -322,6 +333,87 @@ footer,
   color: #222;
   margin: 0 16px;
   font-weight: 500;
+}
+
+/* Kotak putih khusus halaman camera_page */
+.camera-page-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.camera-page-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 48px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.13);
+  width: 1200px;
+  max-width: 98vw;
+  height: 520px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.camera-page-left {
+  width: 500px;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e0e0;
+  border-radius: 40px;
+  margin: 32px;
+}
+
+.camera-page-icon {
+  width: 260px;
+  height: 260px;
+  background: url("/Project_Alin/Asset/camera_icon.svg") no-repeat center center;
+  background-size: 180px 180px;
+  border-radius: 40px;
+}
+
+.camera-page-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.camera-page-desc {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 80px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.camera-page-next {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1.7rem;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  outline: none;
+  transition: color 0.2s;
+  padding: 8px 24px;
+}
+
+.camera-page-next:hover {
+  color: #0077b6;
 }
 
 /* Responsive */

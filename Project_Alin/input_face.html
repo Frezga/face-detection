@@ -52,5 +52,15 @@
       </div>
     </footer>
     <!-- Footer -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const cameraIcon = document.querySelector(".camera-icon");
+        if (cameraIcon) {
+          cameraIcon.addEventListener("click", function() {
+            window.location.href = "camera_page.html";
+          });
+        }
+      });
+    </script>
   </body>
 </html>
