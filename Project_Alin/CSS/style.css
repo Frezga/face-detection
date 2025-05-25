@@ -416,71 +416,45 @@ footer,
   color: #0077b6;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-  .landing .content {
-    max-width: 98vw;
-    padding: 32px 12px;
-    gap: 24px;
-    height: 420px;
-  }
-  .content-left .illustration {
-    width: 220px;
-  }
-  .content-left h1 {
-    font-size: 2.2rem;
-  }
-  .content-right .desc {
-    font-size: 1.1rem;
-  }
-  .camera-icon {
-    width: 90px;
-    height: 90px;
-    background-size: 40px 40px;
-  }
-  .note {
-    font-size: 1rem;
-    bottom: 8px;
-  }
+/* Kotak putih khusus halaman tentang/guide/kami */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  background: none;
+  box-shadow: none;
+  padding: 60px 0 0 0;
 }
 
-@media (max-width: 900px) {
-  .landing .content {
-    flex-direction: column;
-    height: auto;
-    min-height: 340px;
-    padding: 18px 4vw;
-    gap: 18px;
-  }
-  .content-left .illustration {
-    width: 120px;
-  }
-  .content-left h1 {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
-  }
-  .content-right .desc {
-    font-size: 1rem;
-    margin-bottom: 16px;
-  }
-  .camera-icon {
-    width: 50px;
-    height: 50px;
-    background-size: 28px 28px;
-    margin-bottom: 12px;
-  }
-  .note {
-    font-size: 0.9rem;
-    margin-top: 8px;
-  }
+.about-box {
+  background: #fff;
+  color: #222;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  width: 90vw;
+  max-width: 850px;
+  min-height: 350px;
+  padding: 32px 36px;
+  font-size: 1.25rem;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  text-align: left;
+  overflow-y: auto;
 }
 
-@media (max-width: 600px) {
-  .landing .content {
-    padding: 8px 2vw;
-    gap: 8px;
-  }
-  .content-left .illustration {
-    width: 70px;
-  }
+/* Highlight nav aktif */
+.navbar .navbar-nav .active-nav {
+  color: #fff !important;
+  position: relative;
+}
+
+.navbar .navbar-nav .active-nav::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.2rem solid #ffd600;
+  transform: scaleX(0.7);
+  transition: none;
 }
