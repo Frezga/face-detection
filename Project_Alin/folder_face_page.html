@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambil Wajah dari Folder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project_Alin/CSS/folder_face_page.css" />
+    <link rel="stylesheet" href="/Project_Alin/CSS/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-home">
+        <img src="/Project_Alin/Asset/home_icon.svg" alt="Home" />
+      </a>
+      <div class="navbar-nav">
+        <a
+          href="Navigation/tentang_project.html"
+          class="nav-link"
+          id="nav-project"
+          >Tentang Project</a
+        >
+        <a
+          href="Navigation/panduan_singkat.html"
+          class="nav-link"
+          id="nav-panduan"
+          >Panduan Singkat</a
+        >
+        <a href="Navigation/tentang_kami.html" class="nav-link" id="nav-kami"
+          >Tentang Kami</a
+        >
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Hero/Main Section -->
+    <section class="landing" id="home">
+      <main class="folder-face-content">
+        <div class="folder-face-box">
+          <h2 class="folder-face-title">Ambil&nbsp; wajah dari folder</h2>
+          <form class="folder-face-form">
+            <label class="custom-file-label">
+              <input type="file" id="folderInput" style="display: none" />
+              <span id="chooseFileBtn" class="choose-file-btn"
+                >Choose file</span
+              >
+              <span id="fileName" class="file-name">No Chosen File</span>
+            </label>
+          </form>
+          <button class="folder-face-next">
+            Next <span style="font-size: 1.2em">&#8594;</span>
+          </button>
+        </div>
+      </main>
+    </section>
+    <!-- Hero/Main Section -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="credit">
+        <p>Learning Labs 2024 | Face Recognition Project</p>
+      </div>
+    </footer>
+    <!-- Footer -->
+    <script>
+      // Custom file input logic
+      const chooseFileBtn = document.getElementById("chooseFileBtn");
+      const folderInput = document.getElementById("folderInput");
+      const fileName = document.getElementById("fileName");
+
+      chooseFileBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        folderInput.click();
+      });
+
+      folderInput.addEventListener("change", function () {
+        if (folderInput.files.length > 0) {
+          fileName.textContent = folderInput.files[0].name;
+          chooseFileBtn.classList.add("active");
+        } else {
+          fileName.textContent = "No Chosen File";
+          chooseFileBtn.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

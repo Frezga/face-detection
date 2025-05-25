@@ -20,9 +20,21 @@
         <img src="/Project_Alin/Asset/home_icon.svg" alt="Home" />
       </a>
       <div class="navbar-nav">
-        <a href="Navigation/tentang_project.html" class="nav-link" id="nav-project">Tentang Project</a>
-        <a href="Navigation/panduan_singkat.html" class="nav-link" id="nav-panduan">Panduan Singkat</a>
-        <a href="Navigation/tentang_kami.html" class="nav-link" id="nav-kami">Tentang Kami</a>
+        <a
+          href="Navigation/tentang_project.html"
+          class="nav-link"
+          id="nav-project"
+          >Tentang Project</a
+        >
+        <a
+          href="Navigation/panduan_singkat.html"
+          class="nav-link"
+          id="nav-panduan"
+          >Panduan Singkat</a
+        >
+        <a href="Navigation/tentang_kami.html" class="nav-link" id="nav-kami"
+          >Tentang Kami</a
+        >
       </div>
     </nav>
     <!-- Navbar -->
@@ -32,7 +44,7 @@
       <main class="input-face-content">
         <div class="input-face-box">
           <div class="input-face-card">
-            <p>Ambil wajah<br>menggunakan kamera</p>
+            <p>Ambil wajah<br />menggunakan kamera</p>
             <div class="camera-icon"></div>
           </div>
           <div class="input-face-middle">Atau</div>
@@ -53,11 +65,17 @@
     </footer>
     <!-- Footer -->
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const cameraIcon = document.querySelector(".camera-icon");
         if (cameraIcon) {
-          cameraIcon.addEventListener("click", function() {
+          cameraIcon.addEventListener("click", function () {
             window.location.href = "camera_page.html";
+          });
+        }
+        const folderIcon = document.querySelector(".folder-icon");
+        if (folderIcon) {
+          folderIcon.addEventListener("click", function () {
+            window.location.href = "folder_face_page.html";
           });
         }
       });
