@@ -432,11 +432,11 @@ footer,
   color: #222;
   border-radius: 32px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
-  width: 90vw;
-  max-width: 850px;
-  min-height: 350px;
-  padding: 32px 36px;
-  font-size: 1.25rem;
+  width: 98vw;           /* Perbesar lebar */
+  max-width: 1200px;     /* Perbesar max-width */
+  min-height: 500px;     /* Perbesar tinggi minimum */
+  padding: 48px 60px;    /* Perbesar padding */
+  font-size: 1.35rem;
   margin-top: 32px;
   margin-bottom: 32px;
   line-height: 1.6;
