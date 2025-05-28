@@ -54,7 +54,7 @@
               <span id="fileName" class="file-name">No Chosen File</span>
             </label>
           </form>
-          <button class="folder-face-next">
+          <button class="folder-face-next" id="nextBtn" style="display: none">
             Next <span style="font-size: 1.2em">&#8594;</span>
           </button>
         </div>
@@ -74,6 +74,7 @@
       const chooseFileBtn = document.getElementById("chooseFileBtn");
       const folderInput = document.getElementById("folderInput");
       const fileName = document.getElementById("fileName");
+      const nextBtn = document.getElementById("nextBtn");
 
       chooseFileBtn.addEventListener("click", function (e) {
         e.preventDefault();
@@ -84,9 +85,11 @@
         if (folderInput.files.length > 0) {
           fileName.textContent = folderInput.files[0].name;
           chooseFileBtn.classList.add("active");
+          nextBtn.style.display = "block";
         } else {
           fileName.textContent = "No Chosen File";
           chooseFileBtn.classList.remove("active");
+          nextBtn.style.display = "none";
         }
       });
     </script>
