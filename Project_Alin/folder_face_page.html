@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="/Project_Alin/CSS/folder_face_page.css" />
     <link rel="stylesheet" href="/Project_Alin/CSS/style.css" />
+    <link rel="stylesheet" href="/Project_Alin/CSS/popup.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -69,6 +70,18 @@
       </div>
     </footer>
     <!-- Footer -->
+    <!-- Pop up sukses -->
+    <div id="popup-success" class="popup-success">
+      <div class="popup-success-box">
+        <img
+          src="/Project_Alin/Asset/checkmark.png"
+          alt="Success"
+          class="popup-checkmark"
+        />
+        <div class="popup-success-text">Wajah berhasil diperoleh</div>
+      </div>
+    </div>
+
     <script>
       // Custom file input logic
       const chooseFileBtn = document.getElementById("chooseFileBtn");
@@ -92,6 +105,18 @@
           nextBtn.style.display = "none";
         }
       });
+
+      // Tampilkan popup saat tombol Next diklik
+      document
+        .getElementById("nextBtn")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          document.getElementById("popup-success").style.display = "flex";
+          // (Opsional) Tutup popup otomatis setelah 2 detik
+          setTimeout(function () {
+            document.getElementById("popup-success").style.display = "none";
+          }, 2000);
+        });
     </script>
   </body>
 </html>
