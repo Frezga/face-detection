@@ -72,19 +72,25 @@
     </footer>
     <!-- Footer -->
 
-    <!-- Pop up sukses -->
-    <div id="popup-success" class="popup-success">
-      <div class="popup-success-box">
-        <img
-          src="/Project_Alin/Asset/checkmark.png"
-          alt="Success"
-          class="popup-checkmark"
-        />
-        <div class="popup-success-text">Dataset berhasil ditambahkan</div>
-      </div>
-    </div>
-
     <script>
+      // Fungsi untuk load popup.html ke halaman
+      function loadPopup(callback) {
+        fetch("/Project_Alin/popup.html")
+          .then((res) => res.text())
+          .then((html) => {
+            document.body.insertAdjacentHTML("beforeend", html);
+            if (callback) callback();
+          });
+      }
+      // Panggil saat halaman siap
+      document.addEventListener("DOMContentLoaded", function () {
+        loadPopup(function () {
+          // Ganti pesan popup khusus halaman ini
+          const popupText = document.getElementById("popup-success-text");
+          if (popupText) popupText.textContent = "Dataset berhasil ditambahkan";
+        });
+      });
+
       // Custom file input logic
       const chooseFileBtn = document.getElementById("chooseFileBtn");
       const folderInput = document.getElementById("folderInput");
