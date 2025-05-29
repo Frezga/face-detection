@@ -259,6 +259,28 @@ body {
     center center;
   background-size: 70px 70px;
 }
+
+.file-icon {
+  width: 140px;
+  height: 140px;
+  background: #e0e0e0 url("/Project_Alin/Asset/file_icon.svg") no-repeat center
+    center;
+  background-size: 53px 53px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  transition: background 0.2s;
+}
+
+.file-icon:hover {
+  background: #ffd600 url("/Project_Alin/Asset/file_icon.svg") no-repeat center
+    center;
+  background-size: 53px 53px;
+}
+
 .note {
   font-size: 1.2rem;
   color: #222;
@@ -314,4 +336,27 @@ footer,
   border-bottom: 0.2rem solid #ffd600;
   transform: scaleX(0.7);
   transition: none;
+}
+
+.dataset-option-box {
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  width: 480px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ini yang membuat icon selalu di tengah vertikal */
+  padding: 40px 32px;
+  margin: 0 32px;
+  box-sizing: border-box;
+}
+
+.dataset-option-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #222;
 }

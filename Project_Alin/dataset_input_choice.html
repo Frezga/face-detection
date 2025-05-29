@@ -46,7 +46,7 @@
         <div class="input-face-box">
           <div class="input-face-card">
             <p>Ambil dataset yang berupa file tunggal<br /></p>
-            <div class="camera-icon"></div>
+            <div class="file-icon"></div>
           </div>
           <div class="input-face-middle">Atau</div>
           <div class="input-face-card">
@@ -67,16 +67,16 @@
     <!-- Footer -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const cameraIcon = document.querySelector(".camera-icon");
-        if (cameraIcon) {
-          cameraIcon.addEventListener("click", function () {
-            window.location.href = "camera_page.html";
+        const fileIcon = document.querySelector(".file-icon");
+        if (fileIcon) {
+          fileIcon.addEventListener("click", function () {
+            window.location.href = "dataset_input.html";
           });
         }
         const folderIcon = document.querySelector(".folder-icon");
         if (folderIcon) {
           folderIcon.addEventListener("click", function () {
-            window.location.href = "folder_face_page.html";
+            window.location.href = "dataset_input2.html";
           });
         }
       });

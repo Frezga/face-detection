@@ -45,10 +45,17 @@
     <section class="landing" id="home">
       <main class="folder-face-content">
         <div class="folder-face-box">
-          <h2 class="folder-face-title">Ambil dataset dari file</h2>
+          <h2 class="folder-face-title">Ambil dataset dari folder</h2>
           <form class="folder-face-form">
             <label class="custom-file-label">
-              <input type="file" id="folderInput" style="display: none" />
+              <input
+                type="file"
+                id="folderInput"
+                style="display: none"
+                webkitdirectory
+                directory
+                multiple
+              />
               <span id="chooseFileBtn" class="choose-file-btn"
                 >Choose file</span
               >
@@ -98,7 +105,9 @@
 
       folderInput.addEventListener("change", function () {
         if (folderInput.files.length > 0) {
-          fileName.textContent = folderInput.files[0].name;
+          fileName.textContent = folderInput.files[0].webkitRelativePath
+            ? folderInput.files[0].webkitRelativePath.split("/")[0]
+            : folderInput.files[0].name;
           chooseFileBtn.classList.add("active");
           nextBtn.style.display = "block";
         } else {

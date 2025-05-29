@@ -34,7 +34,8 @@
 }
 
 .input-face-card .camera-icon,
-.input-face-card .folder-icon {
+.input-face-card .folder-icon,
+.input-face-card .file-icon {
   margin-top: 32px;
 }
 

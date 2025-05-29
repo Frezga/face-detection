@@ -88,7 +88,7 @@ function bindFolderClick() {
   const folderIcon = document.querySelector(".folder-icon");
   if (folderIcon) {
     folderIcon.addEventListener("click", () => {
-      window.location.href = "dataset_input.html";
+      window.location.href = "dataset_input_choice.html";
     });
   }
 }
