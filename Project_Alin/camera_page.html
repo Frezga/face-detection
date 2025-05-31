@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="/Project_Alin/CSS/style.css" />
     <link rel="stylesheet" href="/Project_Alin/CSS/camera_page.css" />
+    <link rel="stylesheet" href="/Project_Alin/CSS/popup.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -47,15 +48,23 @@
           <div class="camera-page-left">
             <div class="camera-page-icon"></div>
             <!-- Tombol capture di bawah icon kamera -->
-            <button class="camera-capture-btn" title="Ambil Foto">
+            <button
+              class="camera-capture-btn"
+              title="Ambil Foto"
+              id="capture-btn"
+            >
               <img src="/Project_Alin/Asset/capture_icon.svg" alt="Capture" />
             </button>
           </div>
           <div class="camera-page-right">
-            <p class="camera-page-desc">
+            <p class="camera-page-desc" id="camera-desc">
               Posisikan wajah anda<br />di tengah kamera
             </p>
-            <button class="camera-page-next">
+            <button
+              class="camera-page-next"
+              id="next-btn"
+              style="display: none"
+            >
               Next <span style="font-size: 1.2em">&#8594;</span>
             </button>
           </div>
@@ -71,5 +80,59 @@
       </div>
     </footer>
     <!-- Footer -->
+
+    <script>
+      function loadPopup(callback) {
+        fetch("/Project_Alin/popup.html")
+          .then((res) => res.text())
+          .then((html) => {
+            document.body.insertAdjacentHTML("beforeend", html);
+            if (callback) callback();
+          });
+      }
+      // Panggil saat halaman siap
+      document.addEventListener("DOMContentLoaded", function () {
+        loadPopup(function () {
+          // Ganti pesan popup khusus halaman ini
+          const popupText = document.getElementById("popup-success-text");
+          if (popupText) popupText.textContent = "Wajah berhasil diperoleh";
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const captureBtn = document.getElementById("capture-btn");
+        const nextBtn = document.getElementById("next-btn");
+        const desc = document.getElementById("camera-desc");
+        let resetLink = null;
+
+        captureBtn.addEventListener("click", function () {
+          // Sembunyikan tombol capture
+          captureBtn.style.display = "none";
+          // Tampilkan tombol next
+          nextBtn.style.display = "inline-flex";
+          // Ganti pesan dengan link reset
+          desc.innerHTML = `Klik <a href="#" id="reset-capture" style="color:#219653;text-decoration:none;font-weight:500;">di sini</a> jika ingin<br>mengulangi mengambil foto`;
+          // Tambahkan event listener ke link reset
+          resetLink = document.getElementById("reset-capture");
+          resetLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            // Kembalikan ke kondisi awal
+            captureBtn.style.display = "flex";
+            nextBtn.style.display = "none";
+            desc.innerHTML = "Posisikan wajah anda<br />di tengah kamera";
+          });
+        });
+        // tampilkan pop up saat tombol next diklik
+        document
+          .getElementById("next-btn")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("popup-success").style.display = "flex";
+            setTimeout(function () {
+              document.getElementById("popup-success").style.display = "none";
+            }, 1000);
+          });
+      });
+    </script>
   </body>
 </html>
