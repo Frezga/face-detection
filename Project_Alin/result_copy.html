@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Pencocokan Wajah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project_Alin/CSS/style.css" />
+    <link rel="stylesheet" href="/Project_Alin/CSS/result.css" />
+  </head>
+  <body>
+    <!-- Navbar (recycle dari halaman lain) -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-home">
+        <img src="/Project_Alin/Asset/home_icon.svg" alt="Home" />
+      </a>
+      <div class="navbar-nav">
+        <a href="Navigation/tentang_project.html" class="nav-link"
+          >Tentang Project</a
+        >
+        <a href="Navigation/panduan_singkat.html" class="nav-link"
+          >Panduan Singkat</a
+        >
+        <a href="Navigation/tentang_kami.html" class="nav-link">Tentang Kami</a>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <main class="result-main">
+      <div class="result-container">
+        <div class="result-card-group">
+          <div class="result-card">
+            <div class="result-title">Wajah Anda</div>
+            <div class="result-image-box">
+              <img
+                src="/Project_Alin/Asset/camera_icon.svg"
+                alt="Wajah Anda"
+                class="result-camera-icon"
+              />
+            </div>
+          </div>
+          <div class="result-card">
+            <div class="result-title">Hasil pencocokan</div>
+            <div class="result-image-box">
+              <img
+                src="/Project_Alin/Asset/camera_icon.svg"
+                alt="Hasil Pencocokan"
+                class="result-camera-icon"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="result-action">
+          <button id="lihat-hasil-btn">Lihat hasil</button>
+          <button id="next-btn" class="result-next-btn">
+            Next <span style="font-size: 1.2em">&#8594;</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Fungsi untuk load popup_result.html ke halaman
+      function loadPopupResult(callback) {
+        fetch("/Project_Alin/popup_result_fail.html")
+          .then((res) => res.text())
+          .then((html) => {
+            document.body.insertAdjacentHTML("beforeend", html);
+            if (callback) callback();
+          });
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        loadPopupResult(function () {
+          // Tombol close pada popup
+          document.getElementById("popup-fail-close-btn").onclick =
+            function () {
+              document.getElementById("popup-result-fail").style.display =
+                "none";
+            };
+          // Tombol lihat hasil
+          document.getElementById("lihat-hasil-btn").onclick = function () {
+            document.getElementById("popup-result-fail").style.display = "flex";
+          };
+          // Tampilkan popup pertama kali
+          document.getElementById("popup-result-fail").style.display = "flex";
+        });
+
+        // Tombol next
+        document.getElementById("next-btn").onclick = function () {
+          window.location.href = "end.html";
+        };
+      });
+    </script>
+  </body>
+</html>
