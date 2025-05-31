@@ -27,6 +27,7 @@
   width: 500px;
   height: 460px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #e0e0e0;
@@ -77,4 +78,32 @@
 
 .camera-page-next:hover {
   color: #0077b6;
+}
+
+.camera-capture-btn {
+  margin-top: 24px;
+  background: none;
+  border: none;
+  width: 50px; /* diperbesar */
+  height: 50px; /* diperbesar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  /* tambahkan efek scaling */
+}
+
+.camera-capture-btn img {
+  width: 95px;
+  height: 95px;
+  transition: transform 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.camera-capture-btn:active {
+  transform: scale(0.88); /* mengecil saat ditekan */
+}
+
+.camera-capture-btn:active img {
+  transform: scale(0.88);
 }
