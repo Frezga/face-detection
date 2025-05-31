@@ -67,7 +67,7 @@
     <script>
       // Fungsi untuk load popup_result.html ke halaman
       function loadPopupResult(callback) {
-        fetch("/Project_Alin/popup_result.html")
+        fetch("/Project_Alin/popup/popup_result.html")
           .then((res) => res.text())
           .then((html) => {
             document.body.insertAdjacentHTML("beforeend", html);
