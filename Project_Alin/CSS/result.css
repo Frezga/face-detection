@@ -2,15 +2,24 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 0;
 }
 
 .result-container {
   display: flex;
-  gap: 64px; /* lebih lebar antar kotak */
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-top: 100px; /* tambahkan jarak dari atas */
+}
+
+.result-card-group {
+  display: flex;
+  gap: 64px; /* Jarak antar kotak putih */
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .result-card {
@@ -51,7 +60,6 @@
   opacity: 0.6;
 }
 
-/* Tambahkan di Project_Alin/CSS/result.css */
 .popup-match-result {
   position: fixed;
   top: 0;
@@ -60,77 +68,147 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0);
   display: flex;
-  align-items: center; /* Ubah dari flex-start ke center */
+  align-items: center;
   justify-content: center;
   z-index: 9999;
 }
 
 .popup-match-card {
   background: #fff;
-  border-radius: 40px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
-  padding: 64px 40px 40px 40px;
-  min-width: 420px;
-  min-height: 340px;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  padding: 56px 48px 48px 48px;
+  min-width: 540px; /* diperlebar */
+  min-height: 410px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-top: 0; /* Hilangkan margin-top agar benar-benar di tengah */
 }
 
-.popup-match-icon {
+.popup-checkmark-img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 32px auto;
+  display: block;
+  position: static;
+  background: none;
+  box-shadow: none;
+}
+
+.popup-match-icon,
+.popup-match-icon::before {
+  display: none !important;
+}
+
+.popup-close-btn {
   position: absolute;
-  top: -85px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 170px;
-  height: 170px;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  width: 66px;
+  height: 66px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-}
-
-.popup-match-icon::before {
-  content: "";
-  position: absolute;
-  width: 170px;
-  height: 170px;
+  transition: background 0.2s;
   border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  z-index: 1;
 }
-
-.popup-match-icon img {
-  position: relative;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background: none;
-  z-index: 2;
+.popup-close-btn:hover {
+  background: #f0f0f0;
+}
+.popup-close-btn img {
+  width: 56px;
+  height: 56px;
 }
 
 .popup-match-title {
-  margin-top: 32px;
-  font-size: 1.6rem;
+  margin-top: 0;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
   color: #222;
+  margin-bottom: 24px;
 }
 
 .popup-match-detail {
-  margin-top: 32px;
-  font-size: 1.2rem;
+  margin-top: 0;
+  font-size: 1.1rem;
   color: #222;
   text-align: center;
+  width: 100%;
 }
 
-.popup-match-detail > div {
-  margin-bottom: 18px;
+.popup-match-label {
+  font-size: 1.18rem;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
-.popup-match-detail > div:last-child {
-  margin-bottom: 0;
+/* Tombol  */
+#lihat-hasil-btn {
+  position: static;
+  width: 145px;
+  padding: 10px 0;
+  font-size: 1.08rem;
+  font-family: Poppins, sans-serif;
+  border: 2px solid #2196f3;
+  background: #fff;
+  color: #2196f3;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+  transition: background 0.2s, color 0.2s;
+  z-index: 1;
+  margin-left: 0;
+}
+#lihat-hasil-btn:hover {
+  background: #2196f3;
+  color: #fff;
+}
+
+.result-next-btn {
+  position: static;
+  width: 145px;
+  padding: 10px 0;
+  font-size: 1.08rem;
+  font-family: Poppins, sans-serif;
+  border: 2px solid #2196f3;
+  background: #fff;
+  color: #2196f3;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+  transition: background 0.2s, color 0.2s;
+  z-index: 1;
+  margin-right: 0;
+}
+.result-next-btn:hover {
+  background: #2196f3;
+  color: #fff;
+}
+
+.result-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 960px; /* samakan dengan lebar .result-card-group (2 x 440px + gap) */
+  padding: 0 0;
+  box-sizing: border-box;
+  position: static;
+  left: unset;
+  transform: unset;
+  /* center secara horizontal */
+  margin-left: auto;
+  margin-right: auto;
 }

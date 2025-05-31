@@ -93,7 +93,7 @@ function bindFolderClick() {
   }
 }
 
-// Pertama kali, bind event hover ke ilustrasi
+// bind event hover ke ilustrasi
 bindIndexHover();
 bindCameraClick();
 bindFolderClick();
