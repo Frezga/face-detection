@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scanning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project_Alin/CSS/style.css" />
+    <link rel="stylesheet" href="/Project_Alin/CSS/scanning.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-home">
+        <img src="/Project_Alin/Asset/home_icon.svg" alt="Home" />
+      </a>
+      <div class="navbar-nav">
+        <a
+          href="Navigation/tentang_project.html"
+          class="nav-link"
+          id="nav-project"
+          >Tentang Project</a
+        >
+        <a
+          href="Navigation/panduan_singkat.html"
+          class="nav-link"
+          id="nav-panduan"
+          >Panduan Singkat</a
+        >
+        <a href="Navigation/tentang_kami.html" class="nav-link" id="nav-kami"
+          >Tentang Kami</a
+        >
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <div class="scanning-container">
+      <div class="scanning-left">
+        <div class="scanning-camera">
+          <!-- Ganti SVG dengan gambar asset -->
+          <img
+            src="/Project_Alin/Asset/camera_icon.svg"
+            alt="Camera"
+            class="scanning-camera-img"
+          />
+          <span class="scanning-text">Scanning</span>
+        </div>
+        <div class="scanning-loading">
+          <div class="scanning-dot"></div>
+          <div class="scanning-dot"></div>
+          <div class="scanning-dot"></div>
+          <div class="scanning-dot"></div>
+          <div class="scanning-dot"></div>
+        </div>
+      </div>
+      <div class="scanning-right">
+        <div class="scanning-desc">Menganalisa wajah anda</div>
+        <div class="scanning-wait">Harap menunggu<br />beberapa saat</div>
+      </div>
+    </div>
+  </body>
+</html>
