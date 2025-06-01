@@ -115,7 +115,8 @@
           document.getElementById("popup-success").style.display = "flex";
           setTimeout(function () {
             document.getElementById("popup-success").style.display = "none";
-          }, 1000);
+            window.location.href = "index.html"; // Redirect ke halaman awal setelah popup
+          }, 1500); // Ganti 1500 ke durasi yang diinginkan (ms)
         });
     </script>
   </body>

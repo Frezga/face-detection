@@ -111,13 +111,8 @@
       // Tampilkan popup saat tombol Next diklik
       nextBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        document.getElementById("popup-success").style.display = "flex";
-        setTimeout(function () {
-          document.getElementById("popup-success").style.display = "none";
-        }, 2000);
-        const popupText = document.getElementById("popup-success-text");
-          if (popupText) popupText.textContent = "Dataset berhasil ditambahkan";
-        });
+       window.location.href = "dataset_input_name.html";
+      });
       
       
     </script>
