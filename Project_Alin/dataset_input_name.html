@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Nama Dataset</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project_Alin/CSS/dataset_input_name.css" />
+    <link rel="stylesheet" href="/Project_Alin/CSS/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-home">
+        <img src="/Project_Alin/Asset/home_icon.svg" alt="Home" />
+      </a>
+      <div class="navbar-nav">
+        <a
+          href="Navigation/tentang_project.html"
+          class="nav-link"
+          id="nav-project"
+          >Tentang Project</a
+        >
+        <a
+          href="Navigation/panduan_singkat.html"
+          class="nav-link"
+          id="nav-panduan"
+          >Panduan Singkat</a
+        >
+        <a href="Navigation/tentang_kami.html" class="nav-link" id="nav-kami"
+          >Tentang Kami</a
+        >
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Hero/Main Section -->
+    <section class="dataset-landing" id="home">
+      <main class="dataset-input-content">
+        <div class="dataset-input-box">
+          <!-- KOTAK KIRI -->
+          <div class="dataset-input-card dataset-input-card-form">
+            <div class="dataset-folder-input">
+              <img
+                src="/Project_Alin/Asset/folder_icon.svg"
+                alt="Folder"
+                class="dataset-folder-svg"
+              />
+              <input
+                type="text"
+                class="dataset-input-text"
+                placeholder="Masukkan nama"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <!-- KOTAK KANAN + TOMBOL NEXT -->
+          <div style="display: flex; flex-direction: column; align-items: flex-end;">
+            <div class="dataset-input-card dataset-input-card-info">
+              <p>
+                <a href="dataset_input_choice.html" class="dataset-link-green"
+                  >Klik di sini</a
+                >
+                <span> jika ingin<br />mengulangi pengambilan dataset</span>
+              </p>
+            </div>
+            <div class="dataset-next-btn-container">
+              <button
+                class="dataset-input-name-next"
+                onclick="window.location.href='input_face.html'"
+              >
+                Next &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!-- Hero/Main Section -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="credit">
+        <p>-</p>
+      </div>
+    </footer>
+  </body>
+</html>

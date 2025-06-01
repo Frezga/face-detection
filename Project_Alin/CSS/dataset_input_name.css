@@ -1,0 +1,149 @@
+/* Kotak putih khusus halaman dataset_input_name */
+.dataset-input-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.dataset-input-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 48px;
+  background: none;
+}
+
+.dataset-input-card {
+  background: #fff;
+  color: #222;
+  border-radius: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+  width: 370px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: left;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 32px;
+}
+
+.dataset-input-card-form {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.dataset-folder-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 8px;
+}
+
+.dataset-folder-svg {
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+}
+
+.dataset-input-text {
+  border: 1.5px solid #bdbdbd;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  width: 180px;
+  transition: border 0.2s;
+}
+
+.dataset-input-text:focus {
+  border: 1.5px solid #169b4c;
+}
+
+.dataset-input-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dataset-input-card-info p {
+  margin: 0 auto;
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.dataset-link-green {
+  color: #169b4c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: text-decoration 0.2s;
+}
+
+.dataset-link-green:hover {
+  text-decoration: underline;
+}
+
+.dataset-input-name-next {
+  position: static;
+  width: 145px;
+  padding: 10px 0;
+  font-size: 1.08rem;
+  font-family: Poppins, sans-serif;
+  border: 2px solid #2196f3;
+  background: #fff;
+  color: #2196f3;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+  transition: background 0.2s, color 0.2s;
+  z-index: 1;
+  margin-right: 0;
+}
+
+.dataset-input-name-next:hover {
+  background: #2196f3;
+  color: #fff;
+}
+
+.dataset-next-btn-container {
+  width: 370px; /* sama dengan lebar kotak kanan */
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  margin-bottom: 0;
+  padding-right: 0;
+  align-self: flex-end;
+}
+
+@media (max-width: 900px) {
+  .dataset-input-box {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .dataset-input-card {
+    width: 90vw;
+    min-width: 0;
+    max-width: 98vw;
+    height: auto;
+    padding: 24px 12px;
+  }
+  .dataset-next-btn-container {
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 24px;
+  }
+}
