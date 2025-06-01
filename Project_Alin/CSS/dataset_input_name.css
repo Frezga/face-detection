@@ -118,7 +118,7 @@
 }
 
 .dataset-next-btn-container {
-  width: 370px; /* sama dengan lebar kotak kanan */
+  width: 370px;
   display: flex;
   justify-content: flex-end;
   margin-top: 24px;
