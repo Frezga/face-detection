@@ -123,15 +123,14 @@
           });
         });
         // tampilkan pop up saat tombol next diklik
-        document
-          .getElementById("next-btn")
-          .addEventListener("click", function (e) {
-            e.preventDefault();
-            document.getElementById("popup-success").style.display = "flex";
-            setTimeout(function () {
-              document.getElementById("popup-success").style.display = "none";
-            }, 1000);
-          });
+        document.getElementById("next-btn").addEventListener("click", function (e) {
+          e.preventDefault();
+          document.getElementById("popup-success").style.display = "flex";
+          setTimeout(function () {
+            document.getElementById("popup-success").style.display = "none";
+            window.location.href = "scanning.html"; // Redirect ke scanning.html
+          }, 1200); // durasi popup (ms), bisa diubah sesuai kebutuhan
+        });
       });
     </script>
   </body>
